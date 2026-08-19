@@ -1,0 +1,17 @@
+function converter() {
+    let temperaturaCelsius = Number(document.getElementById("celsius").value);
+
+    if (document.getElementById("celsius").value === "") {
+        document.getElementById("resultado").innerHTML =
+            "Digite uma temperatura!";
+        return;
+    }
+
+    let temperaturaFahrenheit = (temperaturaCelsius * 9 / 5) + 32;
+    let temperaturaKelvin = temperaturaCelsius + 273.15;
+
+    document.getElementById("resultado").innerHTML =
+        "Celsius: " + temperaturaCelsius.toFixed(1) + " °C<br>" +
+        "Fahrenheit: " + temperaturaFahrenheit.toFixed(1) + " °F<br>" +
+        "Kelvin: " + temperaturaKelvin.toFixed(2) + " K";
+}
